@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
-import './Home.css'
-import Header from '../../components/Header/Header'
-import ExploreProduct from '../../components/ExploreProduct/ExploreProduct'
-import SubProductDisplay from '../../components/SubProductDisplay/SubProductDisplay'
+import React, { useState } from "react";
+import "./Home.css";
+import Header from "../../components/Header/Header";
+import ExploreProduct from "../../components/ExploreProduct/ExploreProduct";
+import SubProductDisplay from "../../components/SubProductDisplay/SubProductDisplay";
+import AppDownload from "../../components/AppDownload/AppDownload";
 
 const Home = () => {
-  const [category, setCategory] = useState('All')
+  const [category, setCategory] = useState("All");
   return (
     <div>
       <Header />
-      <ExploreProduct category={category} setCategory={setCategory}/>
+      <ExploreProduct category={category} setCategory={setCategory} />
       <SubProductDisplay category={category} />
+      <AppDownload />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
